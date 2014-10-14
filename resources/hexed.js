@@ -51,7 +51,7 @@ $.fn.hexed = function(settings) {
 		$( "#swatch" ).css( "background-color", "#" + hex );
 	}
 	function next() { //random color picking goes here
-		alert("update");
+		alert("update"); //Just there to show next is being called, since it's not actually changing anything until random generation is added
 		var red = "255",
 			green = "000",
 			blue = "000",
