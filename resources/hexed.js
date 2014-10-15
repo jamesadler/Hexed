@@ -3,10 +3,13 @@ $.fn.hexed = function(settings) {
 	init(this);
 
 	function init(init) {
+		var timer = 0;
 		$(init).append('<div class="colorSlider"><div id="red"></div><input type="text" id="redHexNum" /></div>');
 		$(init).append('<div class="colorSlider"><div id="green"></div><input type="text" id="greenHexNum" /></div>');
 		$(init).append('<div class="colorSlider"><div id="blue"></div><input type="text" id="blueHexNum" /></div>');
 		$(init).append('<div id="swatch" class="ui-widget-content ui-corner-all"></div>');
+		$(init).append('<div class="info">Score: <span id="score">0</span></div>');
+		$(init).append('<div class="info">Time: <span id="time">0</span></div>');
 
 		// code from jquery ui START
 		$( "#red, #green, #blue" ).slider({
@@ -16,16 +19,11 @@ $.fn.hexed = function(settings) {
 	      value: 127,
 	      slide: refreshSwatch,
 	      change: refreshSwatch
-	    });
-	    $( "#red" ).slider( "value", 255 );
-	    // $("#redHexNum").attr("value", 255);
-
-	    $( "#green" ).slider( "value", 140 );
-	    // $("#greenHexNum").attr("value", 255);
-
-	    $( "#blue" ).slider( "value", 60 );
-	    // $("#blueHexNum").attr("value", 255);
-	    // code from jquery ui END
+    });
+    $( "#red" ).slider( "value", 255 );
+    $( "#green" ).slider( "value", 140 );
+    $( "#blue" ).slider( "value", 60 );
+    // code from jquery ui END
 	}
 
 	// code from jquery ui START
@@ -57,6 +55,16 @@ $.fn.hexed = function(settings) {
     $("#redHexNum").val(red);
     $("#greenHexNum").val(green);
     $("#blueHexNum").val(blue);
+  }
+
+  function startTimer() {
+  	timer = setInterval(function(){
+  		incrementTimer();
+  	}, 100);
+  }
+
+  function incrementTimer(){
+  	$("#time").html("")
   }
   
 
