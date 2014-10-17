@@ -11,6 +11,7 @@ $.fn.hexed = function(settings) {
 		$(init).append('<div id="swatch" class="ui-widget-content ui-corner-all"></div>');
     $(init).append('<div class="title"> Answer</div>');
     $(init).append('<div id="answer" class="ui-widget-content ui-corner-all"></div>');
+    $(init).append('<button id="gotIt"> GOT IT! </button>')
 		$(init).append('<div class="info">Score: <span id="score">0</span></div>');
 		$(init).append('<div class="info">Time: <span id="time">0</span></div>');
 
@@ -27,7 +28,6 @@ $.fn.hexed = function(settings) {
     $( "#green" ).slider( "value", 140 );
     $( "#blue" ).slider( "value", 60 );
     // code from jquery ui END
-    
     refreshAnswer();
 	}
 
@@ -89,6 +89,15 @@ $.fn.hexed = function(settings) {
   $("#blueHexNum").change(function(){
   	$( "#blue" ).slider( "value", $(this).val() );
   });
+
+  //On Click Function for Got it button displays score and gets new answer
+  $("#gotIt").click(function() {
+    var color = document.getElementById("swatch").style.backgroundColor;
+    var color2 = document.getElementById("answer").style.backgroundColor;
+    alert("Your answer:     \t" + color + "\n" + "Correct Answer: \t" + color2 + "\n" + "Points: \t" );
+    refreshAnswer();
+  });
+
 
   //DIFFICULTY STUFF
   //function to return random number
