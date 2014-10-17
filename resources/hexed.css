@@ -13,7 +13,13 @@ header {
 #swatch {
 	width: 120px;
 	height: 100px;
-	margin-top: 30px;
+	margin-left: 15px;
+	background-image: none;
+}
+
+#answer {
+	width: 120px;
+	height: 100px;
 	margin-left: 15px;
 	background-image: none;
 }
@@ -41,4 +47,11 @@ header {
 	margin-top: 28px;
 	margin-left: 10px;
 	width: 30px;
+}
+
+.info {
+	margin-top: 20px;
+}
+.title {
+	margin-top: 10px;
 }
