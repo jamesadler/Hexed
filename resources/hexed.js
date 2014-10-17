@@ -142,7 +142,7 @@ $.fn.hexed = function(settings) {
       var color1 = "";
       for  (i=0;i<2;i++) {
         var num = randomIntInc(0,1).toString(2);
-        var num1 = Array(5).join(num1);
+        var num1 = Array(5).join(num);
         color1 += num1;
       }
       var color1hex = convertBinaryToHexadecimal(color1);
@@ -150,7 +150,7 @@ $.fn.hexed = function(settings) {
       var color2 = "";
       for (i=0;i<2;i++) {
         var num = randomIntInc(0,1).toString(2);
-        var num1 = Array(5).join(num1);
+        var num1 = Array(5).join(num);
         color2 += num1;
       }
       var color2hex = convertBinaryToHexadecimal(color2);
@@ -158,7 +158,7 @@ $.fn.hexed = function(settings) {
       var color3 = "";
       for (i=0;i<2;i++) {
         var num = randomIntInc(0,1).toString(2);
-        var num1 = Array(5).join(num1);
+        var num1 = Array(5).join(num);
         color3 += num1;
       }
       var color3hex = convertBinaryToHexadecimal(color3);
@@ -170,7 +170,7 @@ $.fn.hexed = function(settings) {
       var color1 = "";
       for (i=0;i<4;i++) {
         var num = randomIntInc(0,1).toString(2);
-        var num1 = Array(3).join(num1);
+        var num1 = Array(3).join(num);
         color1 += num1;
       }
       var color1hex = convertBinaryToHexadecimal(color1);
@@ -178,7 +178,7 @@ $.fn.hexed = function(settings) {
       var color2 = "";
       for (i=0;i<4;i++) {
         var num = randomIntInc(0,1).toString(2);
-        var num1 = Array(3).join(num1);
+        var num1 = Array(3).join(num);
         color2 += num1;
       }
       var color2hex = convertBinaryToHexadecimal(color2);
@@ -186,7 +186,7 @@ $.fn.hexed = function(settings) {
       var color3 = "";
       for (i=0;i<4;i++) {
         var num = randomIntInc(0,1).toString(2);
-        var num1 = Array(3).join(num1);
+        var num1 = Array(3).join(num);
         color3 += num1;
       }
       var color3hex = convertBinaryToHexadecimal(color3);
@@ -225,7 +225,7 @@ $.fn.hexed = function(settings) {
 
 
 var settings = {
-	"difficulty": 4,
+	"difficulty": 1,
 	"turns": 10
 };
 
